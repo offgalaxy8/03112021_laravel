@@ -9,35 +9,12 @@ class PostController extends Controller
 {
     public function index() {
         //return 'this is page';
-        $posts = Post::where('is_published', 1)->get();
-        foreach ($posts as $post) {
-            dump($post->title);
-        }
+        $posts = Post::all();
+        return view('post.index', compact('posts'));
     }
 
     public function create() {
-        $postsArr = [
-            [
-                'title' => 'Title from phpstorm',
-                'content' => 'Some interesting post',
-                'image' => 'blablabla.jpg',
-                'likes' => '12',
-                'is_published' => '1'
-            ],
-            [
-                'title' => 'Another title from phpstorm',
-                'content' => 'Another some interesting post',
-                'image' => 'blablabla2.jpg',
-                'likes' => '19',
-                'is_published' => '1'
-            ]
-        ];
-
-
-        foreach ($postsArr as $item) {
-            Post::create($item);
-        }
-
+        return view('post.create');
     }
 
     public function update() {
@@ -89,5 +66,16 @@ class PostController extends Controller
 
         dump($post->content);
         dump('finished');
+    }
+
+    public function store() {
+        $data = request()->validate([
+            'title' => 'string',
+            'content' => 'string',
+            'image' => 'string',
+            'likes' => 'integer'
+        ]);
+        Post::create($data);
+        return redirect()->route('post.index');
     }
 }

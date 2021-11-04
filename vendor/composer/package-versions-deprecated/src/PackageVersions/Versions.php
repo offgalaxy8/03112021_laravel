@@ -54,6 +54,7 @@ final class Versions
   'laravel/sanctum' => 'v2.12.1@e610647b04583ace6b30c8eb74cee0a866040420',
   'laravel/serializable-closure' => 'v1.0.3@6cfc678735f22ccedad761b8cae2bab14c3d8e5b',
   'laravel/tinker' => 'v2.6.2@c808a7227f97ecfd9219fbf913bad842ea854ddc',
+  'laravel/ui' => 'v3.3.1@a449e3364d9780a80a49894a3af9795c85af806f',
   'league/commonmark' => '2.0.2@2df87709f44b0dd733df86aef0830dce9b1f0f13',
   'league/config' => 'v1.1.1@a9d39eeeb6cc49d10a6e6c36f22c4c1f4a767f3e',
   'league/flysystem' => '1.1.5@18634df356bfd4119fe3d6156bdb990c414c14ea',
