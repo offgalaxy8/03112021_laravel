@@ -11,6 +11,7 @@
       <change afterPath="$PROJECT_DIR$/resources/views/main.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/post/create.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/post/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/post/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/laravel.loc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel.loc.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -202,7 +203,7 @@
       <updated>1635844538145</updated>
       <workItem from="1635844540404" duration="2170000" />
       <workItem from="1635932542820" duration="11602000" />
-      <workItem from="1636016796229" duration="6886000" />
+      <workItem from="1636016796229" duration="7906000" />
     </task>
     <servers />
   </component>
