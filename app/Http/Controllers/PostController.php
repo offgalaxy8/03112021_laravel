@@ -2,15 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
     public function index() {
-        //return 'this is page';
-        $posts = Post::all();
-        return view('post.index', compact('posts'));
+        $category = Category::find(1);
+        $post = Post::find(2);
+
+        dd($post->category);
+        //return view('post.index', compact('posts'));
     }
 
     public function create() {
