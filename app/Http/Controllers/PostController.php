@@ -17,22 +17,6 @@ class PostController extends Controller
         return view('post.create');
     }
 
-    public function update() {
-
-        $postsArr = [
-            'title' => 'Title from phpstorm 666',
-            'content' => 'Some interesting post 666',
-            'image' => 'blablabla666.jpg',
-            'likes' => '1666',
-            'is_published' => '1'
-            ];
-
-        $post = Post::find(6);
-        $post->update($postsArr);
-
-        dump('updated');
-    }
-
     public function delete() {
         $post = Post::find(5);
         $post->delete();
@@ -80,7 +64,26 @@ class PostController extends Controller
     }
 
     public function show(POST $post) {
-//        $post = Post::findOrFail($id);
         return view('post.show', compact('post'));
+    }
+
+    public function edit(POST $post) {
+        return view('post.edit', compact('post'));
+    }
+
+    public function update(POST $post) {
+        $data = request()->validate([
+            'title' => 'string',
+            'content' => 'string',
+            'image' => 'string',
+            'likes' => 'integer'
+        ]);
+        $post->update($data);
+        return redirect()->route('post.show', $post->id);
+    }
+
+    public function destroy(POST $post) {
+        $post->delete();
+        return redirect()->route('post.index');
     }
 }
